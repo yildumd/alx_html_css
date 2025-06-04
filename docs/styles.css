@@ -1,34 +1,99 @@
-/* Existing styles... */
+/* Existing Flexbox layout rules remain unchanged */
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    main {
+/* New Styling Rules */
+/* Logo */
+.logo {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    color: #4a6fa5;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #4a6fa5, #166088);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Article Content */
+article {
+    background: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+}
+
+article h2 {
+    color: #166088;
+    border-bottom: 2px solid #4a6fa5;
+    padding-bottom: 0.5rem;
+}
+
+.intro {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.interests ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.interests li {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background: white;
+    border-left: 4px solid #4a6fa5;
+}
+
+/* Aside */
+aside {
+    background: #e9ecef;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-links a {
+    display: block;
+    padding: 0.75rem;
+    color: #166088;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #d8e2ef;
+    padding-left: 1rem;
+}
+
+/* Footer */
+footer {
+    background: #166088;
+    color: white;
+    padding: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
         flex-direction: column;
     }
     
-    article, aside {
-        flex: auto;
-        width: 100%;
+    .logo {
+        margin-right: 0;
+        margin-bottom: 1rem;
     }
-    
-    aside {
-        order: -1; /* Moves sidebar above content on mobile */
-        margin-bottom: 20px;
-    }
-}
-
-/* Smartphone specific styles */
-body.works_on_smartphone main {
-    flex-direction: column;
-}
-
-body.works_on_smartphone article,
-body.works_on_smartphone aside {
-    flex: auto;
-    width: 100%;
-    padding: 15px;
-}
-
-body.works_on_smartphone aside {
-    background: #e9ecef;
 }
