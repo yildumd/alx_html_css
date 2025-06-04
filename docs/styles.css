@@ -1,21 +1,46 @@
+/* Flexbox Layout */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+article {
+    flex: 2;
+    overflow-y: auto;
     padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
-h1, h2 {
-    color: #333;
+aside {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
 }
 
-a {
-    color: #0066cc;
-    text-decoration: none;
+/* Optional styling for better visibility */
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
 }
 
-a:hover {
-    text-decoration: underline;
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
 }
